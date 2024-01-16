@@ -1,0 +1,538 @@
+:root {
+  --primary-color: #1976d2;
+  --secondary-color: #fb1163;
+  --background-color: #f5f5f5;
+  --text-primary: #333333;
+  --text-secondary: #757575;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Brandon Grotesque";
+}
+
+header {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav a {
+  font-family: "Brandon Grotesque", sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  margin: 0 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #64b5f6;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background: url("https://source.unsplash.com/720x600/?dark,laptop") no-repeat
+    center;
+  color: #fff;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 300px;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.home p {
+  position: relative;
+  z-index: 2;
+  font-family: "Brandon Grotesque";
+}
+
+.home p:first-child,
+.home p:nth-child(3) {
+  font-size: 2rem;
+}
+
+.home p:nth-child(2) {
+  font-size: 4rem;
+}
+
+button {
+  z-index: 2;
+  align-self: flex-start;
+  padding: 10px 15px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #99004d;
+  transform: translateY(-5px);
+}
+
+.about-me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.profile-image {
+  margin-right: 20px;
+}
+
+.profile-image img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 50%;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 400px; /* Adjust the max-width according to your preference */
+  text-align: center; /* Center-align the text */
+}
+
+.about-text h2,
+.about-text h3 {
+  font-size: 2rem;
+}
+
+.about-me h3 {
+  margin-top: 10px;
+}
+
+.cv-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: var(--secondary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.cv-button:hover {
+  background-color: #99004d;
+}
+
+.services {
+  background-color: #f9f9f9; /* Set the background color for the services section */
+  padding: 40px; /* Add padding to the services section */
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--primary-color); /* Set the color for the section title */
+}
+
+.flex-cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: none; /* Remove the border to make the corners smoother */
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+  background-color: var(--primary-color);
+  margin: 10px;
+  border-radius: 10px; /* Adjust the corner radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust the box shadow */
+}
+
+.card:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adjust the box shadow on hover */
+}
+
+.card-logo {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.card-content {
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-title,
+.card-text {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: white;
+}
+
+.skills {
+  background-color: #e6f7ff; /* Set the background color for the skills section */
+  padding: 40px; /* Add padding to the skills section */
+}
+
+.skills-content {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--primary-color); /* Set the color for the section title */
+}
+
+/* Accordion styles */
+.accordion {
+  margin-top: 20px;
+}
+
+.accordion-input {
+  display: none;
+}
+
+.accordion-label {
+  display: flex;
+  align-items: center;
+  background-color: #b3e0ff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.accordion-label:hover {
+  background-color: #99c2ff;
+}
+
+.accordion-title {
+  flex-grow: 1;
+  text-align: left;
+  font-family: "Poppins";
+}
+
+.accordion-content {
+  font-family: "Poppins";
+  display: none;
+  text-align: left;
+  overflow: hidden;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-input:checked + .accordion-label + .accordion-content {
+  display: block;
+}
+
+/* Project and Skills */
+.projects-list {
+  list-style: none;
+  padding: 0;
+}
+
+.projects-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.project-item {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.flex-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  width: calc(33.33% - 20px); /* Adjust the width as needed */
+  margin-bottom: 20px;
+  background: #fff; /* Add your desired background color */
+  border: 1px solid #ddd; /* Add your desired border color */
+  border-radius: 8px; /* Add your desired border radius */
+}
+
+.project-card .card-logo {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.project-card .card-logo i {
+  font-size: 24px; /* Adjust the font size of the icon */
+}
+
+.project-card .card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.project-card .sub-section-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.project-card .projects-description {
+  font-size: 14px;
+  color: #888; /* Add your desired text color */
+}
+
+.contact {
+  background-color: white;
+}
+
+.contact-container {
+  display: flex;
+}
+
+.get-in-touch,
+.form-container {
+  flex: 0.5;
+  box-sizing: border-box;
+  padding: 20px;
+  margin-bottom: 20px;
+  /* background: #fff; */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.user-container {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.left-side {
+  margin-right: 10px;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-side h3 {
+  margin: 0;
+}
+
+.right-side p {
+  margin: 5px 0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.send-message-btn {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.send-message-btn:hover {
+  background-color: #45a049;
+}
+
+form * {
+  font-family: "Poppins", sans-serif;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 35px;
+    z-index: 4;
+    right: 0;
+    background-color: var(--primary-color);
+    border-radius: 0 0 10px 10px;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header:hover nav ul {
+    display: flex;
+  }
+
+  nav li {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+  }
+
+  .about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-image {
+    margin-bottom: 15px;
+  }
+
+  .profile-image img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 50%;
+  }
+
+  .about-text {
+    width: 100%;
+  }
+
+  .cv-button {
+    margin-top: 15px;
+  }
+
+  .flex-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .flex-cards {
+    flex-direction: column;
+  }
+
+  .project-card {
+    width: calc(60% - 20px);
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .get-in-touch,
+  .form-container {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+
+  .home p:first-child,
+  .home p:nth-child(3) {
+    font-size: 1.5rem;
+  }
+
+  .home p:nth-child(2) {
+    font-size: 3rem;
+  }
+}
